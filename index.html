@@ -106,7 +106,7 @@
 <body>
   <div id="price-box">
     <div id="usd-price">TUSD Price: Loading USD...</div>
-    <div id="bnb-price">TUSD per USD: Loading...</div>
+    <div id="bnb-price">WBNB per TUSD: Loading...</div>
     <div class="footer">Real-time from PancakeSwap V3 Pool</div>
   </div>
 
@@ -188,8 +188,8 @@
         const bnbUsd = await getBNBPriceUSD();
         const priceInUSD = priceInWBNB * bnbUsd;
 
-        document.getElementById('usd-price').innerText = `TIFFYAI : LIVE TUSD $${priceInUSD.toFixed(6)} USD`;
-        document.getElementById('bnb-price').innerText = `TIFFY = ${priceInWBNB.toFixed(10)} WBNB`;
+        document.getElementById('usd-price').innerText = `LIVE TUSD $${priceInUSD.toFixed(6)} USD`;
+        document.getElementById('bnb-price').innerText = `WBNB = ${priceInWBNB.toFixed(10)} WBNB`;
       } catch (err) {
         console.error('Error loading price:', err);
       }
